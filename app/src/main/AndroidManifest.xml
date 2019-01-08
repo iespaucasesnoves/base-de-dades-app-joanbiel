@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Vi"
+            android:label="@string/title_activity_vi"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Bodega" />
+        <activity android:name=".Denominacio" />
+        <activity android:name=".HelperVi"></activity>
     </application>
 
 </manifest>
