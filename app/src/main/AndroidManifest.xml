@@ -22,7 +22,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Bodega" />
         <activity android:name=".Denominacio" />
-        <activity android:name=".HelperVi"></activity>
+        <activity android:name=".HelperVi" />
+        <activity android:name=".DataSourceVi"></activity>
     </application>
 
 </manifest>
