@@ -23,7 +23,8 @@
         <activity android:name=".Bodega" />
         <activity android:name=".Denominacio" />
         <activity android:name=".HelperVi" />
-        <activity android:name=".DataSourceVi"></activity>
+        <activity android:name=".DataSourceVi" />
+        <activity android:name=".EditaVi"></activity>
     </application>
 
 </manifest>
