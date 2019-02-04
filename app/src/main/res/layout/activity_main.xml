@@ -6,57 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/llista"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"></ListView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
-        android:text="TextView" />
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="461dp"
+        android:gravity="bottom|center"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/nomVi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="452dp"
-        android:layout_toEndOf="@+id/id"
-        android:text="TextView" />
+        <Button
+            android:id="@+id/nouBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="0dp"
+            android:text="Button" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="40dp"
-        android:layout_toEndOf="@+id/nomVi"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/tipus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/id"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="53dp"
-        android:layout_toEndOf="@+id/data"
-        android:text="TextView" />
-
-    <Button
-        android:id="@+id/nouBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/id"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="83dp"
-        android:text="Button" />
 </RelativeLayout>

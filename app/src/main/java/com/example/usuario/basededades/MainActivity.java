@@ -3,6 +3,7 @@ package com.example.usuario.basededades;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -15,15 +16,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class MainActivity extends ListActivity {
+public class MainActivity extends AppCompatActivity {
 
     private ListAdapter adapter;
-
+    private ListView lv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ListView lv = getListView();
+        lv = findViewById(R.id.llista);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             // En fer onClick a un element de la llista cridam l'activity d'edició i passam la clau primària
             @Override
@@ -69,10 +70,10 @@ public class MainActivity extends ListActivity {
         //Tanquem la BD
         bd.close();
         //Assignar a la listview
-        adapter = new SimpleAdapter(this, llista, R.layout.activity_main,
+        adapter = new SimpleAdapter(this, llista, R.layout.activity_item,
                 new String[]{"id", "nomVi", "data", "tipus"},
                 new int[]{R.id.id, R.id.nomVi, R.id.data, R.id.tipus});
-        setListAdapter(adapter);
+        lv.setAdapter(adapter);
     }
 
     @Override

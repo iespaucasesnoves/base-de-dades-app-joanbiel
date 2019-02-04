@@ -83,11 +83,16 @@ public class HelperVi extends SQLiteOpenHelper {
         database.execSQL(" insert into " + TABLE_TIPUS + "(tipus) values(('Espumós'))");
         database.execSQL(" insert into " + TABLE_TIPUS + "(tipus) values(('Cervesa'))");
         database.execSQL(" insert into " + TABLE_TIPUS + "(tipus) values(('Altres'))");
+        database.execSQL(" insert into " + TABLE_BODEGA + "(_idbodega, nombodega) values ('1','Celler Jaume III')");
+        database.execSQL(" insert into " + TABLE_DENOMINACIO + "(_iddenominacio, nomdenominacio) values ('1','Italiana')");
+        database.execSQL(" insert into " + TABLE_VI + "(nomvi, anada, tipus, lloc," +
+                "graduacio, data, comentari, idbodega, iddenominacio, preu, valolfativa," +
+                "valgustativa,valvisual,nota,foto) values('bluemoscatto','2012', 'rosat', 'Toscana','11º','Juny de 2012','','1','1','30€','','','','','')");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // Detecta si hi ha una canvi a        DATABASE_VERSION        i recrea la base de dades
+        // Detecta si hi ha una canvi a DATABASE_VERSION i recrea la base de dades
         Log.w(HelperVi.class.getName(),
                 "Modificant desde la versió " + oldVersion + " a " + newVersion);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_DENOMINACIO);
